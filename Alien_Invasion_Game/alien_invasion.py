@@ -84,6 +84,11 @@ class AlienInvasion:
 		for bullets in self.bullets.copy():
 			if bullets.rect.bottom <= 0:
 				self.bullets.remove(bullets)
+
+		if not self.aliens:
+			#Remove existing bullets and create new fleet
+			self.bullets.empty()
+			self._create_fleet()
 # --------------------------------------------------------------------------
 	def _create_fleet(self):
 		"""Create the fleet of aliens"""
