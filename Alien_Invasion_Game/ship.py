@@ -30,6 +30,11 @@ class Ship:
 		if self.moving_left and self.rect.left > 0:
 			self.rect.x -= self.settings.ship_speed
 
+	def center_ship(self):
+		"""Center the ship on the screen"""
+		self.rect.midbottom = self.screen_rect.midbottom
+		self.x = float(self.rect.x)
+
 		#Update rect object from self.x
 		# self.rect.x = self.x  #This command is supposed to be in the program, but prevents the ship from moving
 
