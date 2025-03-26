@@ -195,7 +195,7 @@ class AlienInvasion:
 		self.settings.fleet_direction *= -1
 # --------------------------------------------------------------------------
 	def _ship_hit(self):
-		"""Respond to the ship being hit by an alien"""
+		"""Respond to the ship being hit by an alien """
 		if self.stats.ships_left > 0:
 			# Decrement ships left and update the scoreboard
 			self.stats.ships_left -= 1
